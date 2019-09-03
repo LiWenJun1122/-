@@ -23,10 +23,9 @@
         <input type="text" placeholder="请输入想要找的宝贝">
       </div>
     </div>
-    <hr>
     <div class="header-bottom clearfix">
       <div class="mid clearfix">
-          <ul class="fl clearfix header-list">
+          <ul class="fl  header-list">
             <li><a href="javascript:;">首页</a></li>
             <li><a href="javascript:;">限时折</a></li>
             <li><a href="javascript:;">聚豆折</a></li>
@@ -204,7 +203,6 @@ ul {
 .header {
   background: url("../../public/imgs/header/navico.png");
   background-position: 0px 181px;
-  height: 99px;
   font-size: 16px;
   color: #f6f7ef;
   background: #0e0e0f;
