@@ -29,7 +29,7 @@
             <li><a href="javascript:;">首页</a></li>
             <li><a href="javascript:;">限时折</a></li>
             <li><a href="javascript:;">聚豆折</a></li>
-            <li><a href="javascript:;">定制专</a></li>
+            <li><a href="javascript:;">定制专属</a></li>
             <li><a href="javascript:;">聚发现</a></li>
           </ul>
           <a @click="show()" class="all fr" href="javascript:;">
@@ -207,7 +207,7 @@ ul {
   color: #f6f7ef;
   background: #0e0e0f;
   position: relative;
-  z-index: 2;
+  z-index: 5;
   border-bottom: 1px solid #222;
 }
 .fl {
@@ -370,7 +370,7 @@ ul {
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 100;
+  z-index: 99999999999;
   width: 100%;
   background: #fff;
   height: auto;
