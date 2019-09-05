@@ -16,14 +16,19 @@
   </div>  
   <div class="min">
     <div class="box-tit">
-      <h3>{{list[0].title}}</h3>
-      <span>{{list[0].spell}}</span>
+      <h3>{{list[1].title}}</h3>
+      <span>{{list[1].spell}}</span>
+    </div>
+    <div>
+      <a href="javascript:;">
+        <img :src="list[1].picture" alt="">
+      </a>
     </div>
     <div>
       <div class="reg-list">
        <ul class="box-list clearfix" >
-        <li v-for="(item,index) of list.pic" :key="index">
-          <a href="javascript:;"><img :src="item.src" alt=""></a>
+        <li v-for="(haha,index) of list[1].pic" :key="index">
+          <a href="javascript:;"><img :src="haha.src" alt=""></a>
         </li>
       </ul>
     </div>
@@ -38,7 +43,7 @@ export default {
       list: [
         {
           spell: "精挑细选，给你最好的礼物。",
-          title: "今日力荐",
+          title: "新品推荐",
           pic: [
             {
               src: require("../../public/imgs/jinri/jinri1.jpg")
@@ -53,8 +58,28 @@ export default {
               src: require("../../public/imgs/jinri/jinri4.jpg")
             }
           ]
+        },
+        {
+          spell: "精挑细选，给你最好的礼物。",
+          title: "今日力荐",
+          picture:"../../public/imgs/xinpin/xinpin.jpg",
+          pic: [
+            {
+              src: require("../../public/imgs/xinpin/xinpin1.jpg")
+            },
+            {
+              src: require("../../public/imgs/xinpin/xinpin2.jpg")
+            },
+            {
+              src: require("../../public/imgs/xinpin/xinpin3.jpg")
+            },
+            {
+              src: require("../../public/imgs/xinpin/xinpin4.jpg")
+            }
+          ]
         }
       ]
+      
     };
   }
   
