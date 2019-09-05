@@ -28,7 +28,8 @@
       <div class="reg-list">
        <ul class="box-list clearfix" >
         <li v-for="(haha,index) of list[1].pic" :key="index">
-          <a href="javascript:;"><img :src="haha.src" alt=""></a>
+          <a href="javascript:;">
+            <img :src="haha.src" alt=""></a>
         </li>
       </ul>
     </div>
