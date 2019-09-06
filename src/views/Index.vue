@@ -1,12 +1,11 @@
 <template>
-<div>
-  <carousel></carousel>
-  <div class="min index-box">
+<div class="min index-box">
+  <div>
     <div class="box-tit">
       <h3>{{list[0].title}}</h3>
       <span>{{list[0].spell}}</span>
     </div>
-    <div class="reg-list">
+    <div class="lili">
        <ul class="box-list clearfix" >
         <li v-for="(item,index) of list[0].pic" :key="index">
           <a href="javascript:;"><img :src="item.src" alt=""></a>
@@ -14,22 +13,23 @@
       </ul>
     </div>
   </div>  
-  <div class="min">
+  <div class="min" v-for="bb in 4" :key="bb">
     <div class="box-tit">
       <h3>{{list[1].title}}</h3>
       <span>{{list[1].spell}}</span>
     </div>
-    <div>
+    <div class="min my-box">
       <a href="javascript:;">
-        <img :src="list[1].picture" alt="">
+        <img :src="list[1].picture.src">
       </a>
     </div>
     <div>
-      <div class="reg-list">
-       <ul class="box-list clearfix" >
+      <div class="reg-list lili">
+       <ul class="clearfix" >
         <li v-for="(haha,index) of list[1].pic" :key="index">
           <a href="javascript:;">
-            <img :src="haha.src" alt=""></a>
+            <img :src="haha.src" alt="">
+          </a>
         </li>
       </ul>
     </div>
@@ -43,8 +43,8 @@ export default {
     return {
       list: [
         {
-          spell: "精挑细选，给你最好的礼物。",
-          title: "新品推荐",
+         spell: "精挑细选，给你最好的礼物。",
+          title: "今日力荐",
           pic: [
             {
               src: require("../../public/imgs/jinri/jinri1.jpg")
@@ -61,9 +61,9 @@ export default {
           ]
         },
         {
-          spell: "精挑细选，给你最好的礼物。",
-          title: "今日力荐",
-          picture:"../../public/imgs/xinpin/xinpin.jpg",
+           spell: "精挑细选，给你最好的礼物。",
+          title: "新品推荐",
+          picture: {src: require("../../public/imgs/xinpin/xinpin.jpg")},
           pic: [
             {
               src: require("../../public/imgs/xinpin/xinpin1.jpg")
@@ -78,6 +78,25 @@ export default {
               src: require("../../public/imgs/xinpin/xinpin4.jpg")
             }
           ]
+        },
+        {
+           spell: " 独一无二，定制专属于你的周边",
+          title: "定制专区",
+          picture: {src: require("../../public/imgs/dingzhi/list.jpg")},
+          pic: [
+            {
+              src: require("../../public/imgs/dingzhi/list1.jpg")
+            },
+            {
+              src: require("../../public/imgs/dingzhi/list2.jpg")
+            },
+            {
+              src: require("../../public/imgs/dingzhi/list3.jpg")
+            },
+            {
+              src: require("../../public/imgs/dingzhi/list4.jpg")
+            }
+          ]
         }
       ]
       
@@ -87,6 +106,11 @@ export default {
 };
 </script>
 <style scoped>
+.my-box>a>img{
+      width: 1180px;
+    height: 240px;
+    padding: 0px 50px 0;
+}
 .box-tit {
   padding: 50px 50px 0;
   line-height: 32px;
@@ -106,8 +130,8 @@ h3 {
   color: #333;
   font-size: 28px;
 }
-.reg-list {
-  margin: 20px auto 5px;
+.lili{
+   margin: 20px auto 5px;
   width: 1200px;
 }
 .min {
@@ -151,5 +175,24 @@ h3 {
 .box-list>li>a:hover{
     box-shadow: 0 15px 30px rgba(0,0,0,0.2);
     transform: translate3d(0, -2px, 0);
+}
+.reg-list>ul>li{
+  margin: 0 10px 20px;
+    float: left;
+    width: 280px;
+    height: 356px;
+    position: relative;
+    z-index: 1;
+    transition: all .2s linear;
+    overflow: hidden;
+    border:0;
+}
+.reg-list>ul>li:hover{
+    transform: translate3d(0, -2px, 0);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+.reg-list>ul>li>a>img{
+  width: 280px;
+    height: 268px;
 }
 </style>
