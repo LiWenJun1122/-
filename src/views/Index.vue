@@ -24,6 +24,10 @@
       </a>
     </div>
     <div>
+      <p></p>
+      <p></p>
+    </div>
+    <div>
       <div class="reg-list lili">
        <ul class="clearfix" >
         <li v-for="(haha,index) of list[1].pic" :key="index">
@@ -61,8 +65,9 @@ export default {
           ]
         },
         {
-           spell: "精挑细选，给你最好的礼物。",
+          spell: "精挑细选，给你最好的礼物。",
           title: "新品推荐",
+
           picture: {src: require("../../public/imgs/xinpin/xinpin.jpg")},
           pic: [
             {
